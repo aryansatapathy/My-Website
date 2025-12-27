@@ -30,7 +30,7 @@ h1 {
   text-shadow: 0 0 15px #00eaff;
 }
 
-/* HOVER EFFECT */
+/* HELLO HOVER */
 h1:hover {
   color: #fff;
   transform: scale(1.2) rotate(-2deg);
@@ -50,9 +50,33 @@ h1:hover {
   }
 }
 
-/* SUBTEXT */
-p {
-  margin-top: 15px;
-  font-size: 18px;
+/* WELCOME TEXT */
+.welcome-text {
+  margin-top: 20px;
+  font-size: 22px;
+  letter-spacing: 1px;
   color: #ffffffcc;
+  opacity: 0;
+  animation: fadeSlide 2s ease forwards;
+  animation-delay: 1.5s;
+  transition: all 0.4s ease;
+}
+
+/* WELCOME HOVER */
+.welcome-text:hover {
+  color: #00eaff;
+  transform: scale(1.05);
+  text-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff;
+}
+
+/* FADE + SLIDE */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
